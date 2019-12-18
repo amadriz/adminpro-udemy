@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// FUNCION PARA LLAMAR PLUGINS DE JQUERY
+declare function init_plugins();
+
 
 @Component({
   selector: 'app-pages',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+   }
 
   ngOnInit() {
+    init_plugins();
   }
 
 }

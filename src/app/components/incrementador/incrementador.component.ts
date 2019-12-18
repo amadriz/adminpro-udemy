@@ -7,7 +7,7 @@ import { Component, Input, Output, ViewChild, OnInit, EventEmitter, ElementRef }
 })
 export class IncrementadorComponent implements OnInit {
 
-  // @Vie
+  // ViewChild para resolver el problema de barras progress de que se actualice segun la que se usa
   @ViewChild('txtProgress', null) txtProgress: ElementRef;
   // @Input para recibir las variables desde el componente padre
   // tslint:disable-next-line: no-input-rename
@@ -34,7 +34,7 @@ export class IncrementadorComponent implements OnInit {
     }
     // Elemento html
     // elemHTML.value = this.progreso;
-
+    // ViewChild para resolver el problema de barras progress de que se actualice segun la que se usa
     this.txtProgress.nativeElement.value = this.progreso;
 
     // Event emitter > voy a emitir el progreso
